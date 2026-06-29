@@ -1313,3 +1313,55 @@ body {
     max-width: 100%;
   }
 }
+
+/* Print Invoice Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .receipt-paper, .receipt-paper * {
+    visibility: visible;
+  }
+  
+  .receipt-paper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .modal-overlay {
+    background: transparent !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .modal-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .modal-header, .modal-footer {
+    display: none !important;
+  }
+
+  .notification-container {
+    display: none !important;
+  }
+}
